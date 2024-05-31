@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>BOOKING HOTEL</h1>
+    <p>Indiquez vos dates de réservation - Toute annulation doit se faire 48h avant</p>
+
+<table>
+<tr>
+    <td>
+        <img src="img/logo_hotel.png" alt="logo hotel" width="100px">
+    </td>
+    <td colspan="3">
+        <p id="FRÉtranger">France - Étranger</p>
+    </td>
+</tr>
+
+<!--Lieu de séjour-->
+<tr>
+    <td>
+        <p>Lieu de séjour</p>
+    </td>
+    <td colspan="3">
+        <input type="text" id="sejour" placeholder="Lieu de séjour" />
+    </td>
+</tr>
+
+<!--Date arrivé / départ-->
+<tr>
+    <td>
+        <p>Départ</p>
+        <input type="date" id="depart">
+    </td>
+    <td colspan="3">
+        <p>Arrivée</p>
+        <input type="date" id="arrivee">
+    </td>
+</tr>
+
+<!--Adulte-->
+<tr>
+    <td>
+        <p>Adulte</p>
+    </td>
+    <td>
+        <input type="number" id="adulte_nombre" min="0" value="0" disabled />
+    </td>
+    <td>
+        <button class="addition_btn" onclick="addition('adulte_nombre')">
+            <i class="fa-classic fa-plus"></i>
+        </button>
+    </td>
+    <td>
+        <button class="soustraction_btn" onclick="soustraction('adulte_nombre')">
+            <i class="fa-solid fa-minus"></i>
+        </button>
+    </td>
+</tr>
+
+<!--Enfant-->
+<tr>
+    <td>
+        <p>Enfant</p>
+    </td>
+    <td>
+        <input type="number" id="enfant_nombre" min="0" value="0" disabled />
+    </td>
+    <td>
+        <button class="addition_btn" onclick="addition('enfant_nombre')">
+            <i class="fa-classic fa-plus"></i>
+        </button>
+    </td>
+    <td>
+        <button class="soustraction_btn" onclick="soustraction('enfant_nombre')">
+            <i class="fa-solid fa-minus"></i>
+        </button>
+    </td>
+</tr>
+
+<!--Chambre-->
+<tr>
+    <td>
+        <p>Chambre</p>
+    </td>
+    <td>
+        <input type="number" id="chambre_nombre" min="0" value="0" disabled />
+    </td>
+    <td>
+        <button class="addition_btn" onclick="addition('chambre_nombre')">
+            <i class="fa-classic fa-plus"></i>
+        </button>
+    </td>
+    <td>
+        <button class="soustraction_btn" onclick="soustraction('chambre_nombre')">
+            <i class="fa-solid fa-minus"></i>
+        </button>
+    </td>
+</tr>
+
+<!--Rechercher-->
+<tr>
+    <td colspan="4">
+        <input type="button" value="Rechercher" id="btn_rechercher">
+    </td>
+</tr>
+
+<!--Effacer-->
+<tr>
+    <td colspan="4">
+        <input type="button" value="Effacer" id="btn_effacer" onclick="effacer()">
+    </td>
+</tr>
+
+<!--Checkbox travail-->
+<tr>
+    <td colspan="4">
+        <input type="checkbox" id="travail"><span class="text_travail">Je voyage pour le travail</span>
+    </td>
+</tr>
+
+<!--Age enfant-->
+<tr id="age-enfant-container">
+    <td colspan="4">
+        <div id="enfant-ages"></div>
+    </td>
+</tr>
+
+</table>
+
+<!--Confirmation-->
+<section class="confirmation_reservation">
+    <h2>Confirmation de la réservation</h2>
+    <div id="recapitulatif"></div>
+</section>
+
+
+<!--Footer-->
+<footer>
+    <p>&copy; 2024 Booking Hotel. Tous droits réservés.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
