@@ -3,7 +3,7 @@
 
 
 html, body {
-    background-image: url(../img/hotel.jpg);
+    background-image: url(img/hotel.jpg);
     overflow: auto;
     scroll-behavior: smooth;
     margin: 0;
