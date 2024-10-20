@@ -1,3 +1,3 @@
 # TP SITE HOTEL
 
-yohan som & alexandre lopere TPE
+yohan & alexandre tpe (1ère année BUT MMI MEAUX)
